@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #330143;
+            text-align: center;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Centering the cards */
+        }
+        .card h2 {
+            margin: 0 0 10px;
+            color: #000000; /* Accent color for headings */
+        }
+        .card p {
+            margin: 0;
+            font-size: 18px;
+            color: #555;
+        }
+        .card-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #330143;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .card-link:hover {
+            background-color: #E6E6FA;
+            color: #330143; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to the Job Portal</h1>
+
+<div class="card">
+    <h2>Total Users</h2>
+    <p>{{ total_users }}</p>
+    <a href="#" class="card-link">View Users</a>
+</div>
+
+<div class="card">
+    <h2>Total Applications</h2>
+    <p>{{ total_applications }}</p>
+    <a href="{% url 'appliedJob' %}" class="card-link">View Applications</a>
+</div>
+
+<div class="card">
+    <h2>Total Jobs</h2>
+    <p>{{ total_jobs }}</p>
+    <a href="{% url 'totalTable' %}" class="card-link">View Table</a>
+</div>
+
+</body>
+</html>
+{% endblock body %}
