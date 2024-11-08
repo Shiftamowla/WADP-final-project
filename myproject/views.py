@@ -106,6 +106,14 @@ def totalTable(req):
     }
     return render(req,'totalTable.html',context)
 
+def totaluser(req):
+    data=Custom_user.objects.all()
+
+    context = {
+        'data': data
+    }
+    return render(req,'alluser.html',context)
+
 
 login_required
 def Table(req):

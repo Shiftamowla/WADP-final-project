@@ -15,7 +15,7 @@
             padding: 20px;
         }
         h1 {
-            color: #330143;
+            color: #51066a;
             text-align: center;
         }
         .card {
@@ -40,7 +40,7 @@
             display: inline-block;
             margin-top: 10px;
             padding: 10px 15px;
-            background-color: #330143;
+            background-color: #51066a;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -48,7 +48,7 @@
         }
         .card-link:hover {
             background-color: #E6E6FA;
-            color: #330143; /* Darker shade on hover */
+            color: #51066a; /* Darker shade on hover */
         }
     </style>
 </head>
@@ -59,7 +59,7 @@
 <div class="card">
     <h2>Total Users</h2>
     <p>{{ total_users }}</p>
-    <a href="#" class="card-link">View Users</a>
+    <a href="{% url 'totaluser' %}" class="card-link">View Users</a>
 </div>
 
 <div class="card">

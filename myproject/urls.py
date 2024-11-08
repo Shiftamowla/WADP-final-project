@@ -18,6 +18,7 @@ urlpatterns = [
     path('appliedJob/', appliedJob, name='appliedJob'),
     path('ApplyNow/<str:job_title>/<int:apply_id>', ApplyNow, name='ApplyNow'),
     path('totalTable/', totalTable, name='totalTable'),
+    path('totaluser/', totaluser, name='totaluser'),
     path('Table/', Table, name='Table'),
     path('base/', base, name='base'),
     path('home/', home, name='home'),
